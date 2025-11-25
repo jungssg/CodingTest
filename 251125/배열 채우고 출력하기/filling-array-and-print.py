@@ -1,4 +1,6 @@
 text = list(input().split())
 
 text_rev = text[::-1]
-print(text_rev,end='')
+
+for i in range(10):
+    print(text_rev[i], end='')
