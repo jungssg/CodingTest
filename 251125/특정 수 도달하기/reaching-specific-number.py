@@ -1,7 +1,7 @@
 arr = list(map(int, input().split()))
 answer = []
 
-TR = 0
+TR = 10
 
 for i in range(10):
     if arr[i] < 250:
