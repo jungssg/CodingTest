@@ -5,5 +5,6 @@ for x in arr:
     if x != 0:
         if x % 2 == 0:
             arr2.append(x)
-
+    else:
+        break
 print(len(arr2), sum(arr2))
