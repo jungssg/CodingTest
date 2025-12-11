@@ -2,6 +2,6 @@ n = int(input())
 
 nums = list(map(int, input().split()))
 
-for i in range(n,-1,-1):
-    if i % 2 ==0:
-        print(i, end=" ")
+for num in nums[::-1]:
+    if num % 2 ==0:
+        print(num, end=' ')
