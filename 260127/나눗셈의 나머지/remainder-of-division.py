@@ -9,3 +9,7 @@ while a > 1 :
     cnt[x] += 1
 
 # print(cnt)
+answer = 0
+for i in cnt:
+    answer = answer + i**2
+print(answer)
