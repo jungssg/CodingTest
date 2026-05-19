@@ -7,5 +7,8 @@ answer = [0]
 
 for i in range(n):
     for j in range(i+1,n):
-        answer.append(price[j]-price[i])
+        # 이익은 파는값 - 산값 => price[j] - price[i]
+        profit = price[j] - price[i]
+        if profit > 0 :
+            answer.append(profit)
 print(max(answer))
