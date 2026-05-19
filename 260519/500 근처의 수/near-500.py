@@ -4,10 +4,9 @@ nums = list(map(int, input().split()))
 pre_min_num = 0
 pre_max_num = 1000
 for num in nums:
-    if num < 500:
-        if num > pre_min_num:
+    if num < 500 and num > pre_min_num:
             pre_min_num = num
-    else:
-        if num < pre_max_num:
+    if num > 500 and num < pre_max_num:
             pre_max_num = num
+
 print(pre_min_num, pre_max_num)
