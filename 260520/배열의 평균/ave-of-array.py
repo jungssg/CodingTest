@@ -1,11 +1,28 @@
 n=2
 nums = []
-garo = []
-sero = []
-
 for _ in range(n):
     nums.append(list(map(int,input().split())))
-    
-print(round(sum(nums[0])/4, 1), round(sum(nums[1])/4,1))
-print(round((nums[0][0]+nums[1][0])/2,1), round((nums[0][1]+nums[1][1])/2,1),round((nums[0][2]+nums[1][2])/2, 1),round((nums[0][3]+nums[1][3])/2,1))
-print(round((sum(nums[0])+sum(nums[1]))/8, 1))
+
+
+# 가로 평균 출력 => [0][0]/[0][1]/[0][2]/[0][3]
+for i in range(2):
+    sum1 = 0
+    for j in range(4):
+        sum1 += nums[i][j]
+    print(round(sum1/4,1), end=' ')
+print()
+
+# 세로 평균 출력 => [0][0][1][0] / 
+for i in range(4):
+    sum2 = 0
+    for j in range(2):
+        sum2 += nums[j][i]
+    print(round(sum2/2,1), end= ' ')
+print()
+
+# 전체평균
+sum3=0
+for i in range(2):
+    for j in range(4):
+        sum3 += nums[i][j]
+print(round(sum3/8,1))
